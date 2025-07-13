@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>날씨 정보 앱</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="search-box">
+            <input type="text" placeholder="도시를 입력하세요..." spellcheck="false" id="search-input">
+            <button id="search-btn">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+
+        <div class="weather-box">
+            <div class="weather-info">
+                <div class="location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span id="city">도시를 검색하세요</span>
+                </div>
+                <div class="temperature">
+                    <span id="temp">--</span>°C
+                </div>
+                <div class="weather-desc">
+                    <span id="description">날씨 정보</span>
+                </div>
+            </div>
+
+            <div class="weather-details">
+                <div class="detail-item">
+                    <i class="fas fa-thermometer-half"></i>
+                    <div>
+                        <span class="label">체감온도</span>
+                        <span id="feels-like">--°C</span>
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-tint"></i>
+                    <div>
+                        <span class="label">습도</span>
+                        <span id="humidity">--%</span>
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-wind"></i>
+                    <div>
+                        <span class="label">풍속</span>
+                        <span id="wind-speed">-- km/h</span>
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-eye"></i>
+                    <div>
+                        <span class="label">가시거리</span>
+                        <span id="visibility">-- km</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="forecast">
+                <h3>3일 예보</h3>
+                <div class="forecast-container" id="forecast-container">
+                    <!-- 예보 정보가 여기에 동적으로 추가됩니다 -->
+                </div>
+            </div>
+        </div>
+
+        <div class="error-message" id="error-message" style="display: none;">
+            <i class="fas fa-exclamation-triangle"></i>
+            <span id="error-text">도시를 찾을 수 없습니다.</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
